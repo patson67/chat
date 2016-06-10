@@ -11,6 +11,28 @@ class MessageManager{
 	}
 
 
+	public function getAll(){
+
+
+	
+		//ci-dessous, on transforme $id en entier
+	
+		// $query est la requête: on va chercher l'id dans la bdd
+		$query="SELECT * FROM messages" ;
+		//on applique la requête:
+		$list=[];
+		$res= mysqli_query($this->link,$query);
+		//on définit la variable user et on "l'envoie" dans l'objet user
+		while($all=mysqli_fetch_object($res,"Message", [$this->link]));
+
+		$list[] = $all;
+
+		return $list;
+
+
+	}
+
+
 
 	public function create($data)
 	{
