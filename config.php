@@ -14,7 +14,7 @@
         <script src="<?= JS_PATH ?>bootstrap.min.js"></script>
         <script src="<?= JS_PATH ?>main.js"></script>
         <!--<script src="<?= JS_PATH ?>less.min.js"></script> -->
-        <title>Chat - GP</title>
+        <title>Musikdream</title>
     </head>
     </head>
     <body>
