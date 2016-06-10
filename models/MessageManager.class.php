@@ -23,9 +23,8 @@ class MessageManager{
 		$list=[];
 		$res= mysqli_query($this->link,$query);
 		//on définit la variable user et on "l'envoie" dans l'objet user
-		while($all=mysqli_fetch_object($res,"Message", [$this->link]));
-
-		$list[] = $all;
+		while($all=mysqli_fetch_object($res,"Message", [$this->link]))
+        $list[] = $all;
 
 		return $list;
 
