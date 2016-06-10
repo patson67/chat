@@ -25,11 +25,10 @@ class MessageManager{
 		
 
 		
-		$nom = mysqli_real_escape_string($this->link, $message->getNom());
+		$nom = mysqli_real_escape_string($this->link, $nom->getNom());
 		$message= mysqli_real_escape_string($this->link, $message->getMessage());
 		
-		$query = "INSERT INTO message (nom, message)
-		VALUES ('".$nom."', '".$message."')";
+		$query = "INSERT INTO message (nom, message) VALUES ('".$nom."', '".$message."')";
 		$res = mysqli_query($this->link, $query);
 
 		var_dump($res);
@@ -50,8 +49,6 @@ class MessageManager{
 
 
 
-     };
-
-
-
+     }
+ }
 ?>

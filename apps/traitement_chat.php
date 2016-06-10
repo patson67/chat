@@ -1,6 +1,7 @@
 <?php
+
 if ( isset( $_POST['action'] ) ) {
-    
+    // var_dump($_POST);
     if ($_POST['action'] == 'ajout') {
 
         $manager = new MessageManager( $link );// $link => $this->link
