@@ -2,17 +2,21 @@
 
 $message = new MessageManager($link);
 
-$message->getAll();
+$messages = $message->getAll();
 
 
 
 $count = 0 ;
 
-while($count < count($message))
+while($count < count($messages))
 
 {
-   $result = $message[$count];
+   $result = $messages[$count];
+
+   
    require('views/chat_list.phtml');
+
+   $count++;
 
 }
 

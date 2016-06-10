@@ -1,7 +1,6 @@
 <?php
     session_start();
     require('config.php');
-	require('apps/skel.php');
 
     function __autoload( $className ) {
         require('models/' . $className . '.class.php' );
@@ -29,5 +28,6 @@
         require('apps/traitement_' . $access_traitement[$page] . '.php' );
     }
 
+	require('apps/skel.php');
 
 ?>
