@@ -18,7 +18,7 @@ class MessageManager{
 		//ci-dessous, on transforme $id en entier
 	
 		// $query est la requête: on va chercher l'id dans la bdd
-		$query="SELECT * FROM messages" ;
+		$query="SELECT * FROM messages  LIMIT 0,5" ;
 		//on applique la requête:
 		$list=[];
 		$res= mysqli_query($this->link,$query);
