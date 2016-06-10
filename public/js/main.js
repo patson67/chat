@@ -2,9 +2,19 @@ jQuery(document).ready(function(){
 	$('form').submit(function(info)
 	{
 		info.preventDefault();
-		$.post(/*'...'*/, {/**/}, function()
+		var nom = $('#nom').val();
+		var message = $('#message').val();
+		var tab = { 'nom' : nom,
+					'message' : message,
+					'action' : 'ajout'
+					};
+		console.log(tab);
+
+
+		$.post( 'index.php?page=chat_liste&ajax', tab , function()
 		{
-			//
+			// vider champs message
+			$('#message').val('');
 		});
 		return false;
 	});

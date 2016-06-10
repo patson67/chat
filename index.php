@@ -16,7 +16,8 @@
     $error = '';
 
     $access = array('chat', 'chat_liste');
-    $access_traitement = array('chat' => 'chat');      
+    $access_traitement = array('chat' => 'chat',
+                                'chat_liste' => 'chat');      
 
     if ( isset( $_GET['page'] ) ) {
         if ( in_array( $_GET['page'], $access ) ) {
