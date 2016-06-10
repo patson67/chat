@@ -1,8 +1,15 @@
 jQuery(document).ready(function(){
-    
-    jQuery('#js-panier-status').change(function(){
-        var value = jQuery(this).val();
-        window.location.href = '?page=admin_commandes&status=' + value;
-    });
-    
+	$('form').submit(function(info)
+	{
+		info.preventDefault();
+		$.post(/*'...'*/, {/**/}, function()
+		{
+			//
+		});
+		return false;
+	});
+	setInterval(function()
+	{
+	   $('#liste_messages').load('index.php?page=chat_liste&ajax');
+	}, 1000);
 });

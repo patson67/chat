@@ -15,7 +15,7 @@
     $page = 'chat';
     $error = '';
 
-    $access = array('chat');
+    $access = array('chat', 'chat_liste');
     $access_traitement = array('chat' => 'chat');      
 
     if ( isset( $_GET['page'] ) ) {
@@ -28,6 +28,11 @@
         require('apps/traitement_' . $access_traitement[$page] . '.php' );
     }
 
-	require('apps/skel.php');
+    if (isset($_GET['ajax']))
+    {
+        require('apps/'.$page.'.php');
+    }
+    else
+    	require('apps/skel.php');
 
 ?>

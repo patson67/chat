@@ -1,4 +1,8 @@
 <?php
+$message = new MessageManager($link);
+
+$messages = $message->getAll();
+
 $count = 0 ;
 
 while($count < count($messages))
