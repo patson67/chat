@@ -20,7 +20,7 @@ class MessageManager{
 			throw new Exception("Paramètre manquant: message");
 
 		
-		$nom->setNom($data['nom']);
+		$message->setNom($data['nom']);
 		$message->setMessage($data['message']);
 		
 
@@ -28,7 +28,7 @@ class MessageManager{
 		$nom = mysqli_real_escape_string($this->link, $message->getNom());
 		$message= mysqli_real_escape_string($this->link, $message->getMessage());
 		
-		$query = "INSERT INTO message (nom, message)
+		$query = "INSERT INTO messages (nom, message)
 		VALUES ('".$nom."', '".$message."')";
 		$res = mysqli_query($this->link, $query);
 
@@ -50,7 +50,8 @@ class MessageManager{
 
 
 
-     };
+     }
+}
 
 
 
