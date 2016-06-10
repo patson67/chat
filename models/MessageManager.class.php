@@ -15,10 +15,10 @@ class MessageManager{
 	public function create($data)
 	{
 		$message = new Message($this->link);
-		if (!isset($data['nom']))
+		/*if (!isset($data['nom']))
 			throw new Exception("Paramètre manquant: nom");
 		if (!isset($data['message']))
-			throw new Exception("Paramètre manquant: message");
+			throw new Exception("Paramètre manquant: message");*/
 
 		
 		$message->setNom($data['nom']);
@@ -32,9 +32,11 @@ class MessageManager{
 
 		
 
-		$query = "INSERT INTO message (nom, message) VALUES ('".$nom."', '".$message."')";
+		$query = "INSERT INTO messages (nom, message) VALUES ('".$nom."', '".$message."')";
 
 		$res = mysqli_query($this->link, $query);
+
+	
 
 	
 		
@@ -59,6 +61,6 @@ class MessageManager{
 
 
 
-
  
 ?>
+
