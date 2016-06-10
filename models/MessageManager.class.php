@@ -4,7 +4,7 @@ class MessageManager{
 
 	private $link;
 
-	public function__construct()
+	public function __construct($link)
 	{
 		$this->link = $link;
 	}
@@ -20,7 +20,7 @@ class MessageManager{
 			throw new Exception("Paramètre manquant: message");
 
 		
-		$message->setNom($data['nom']);
+		$nom->setNom($data['nom']);
 		$message->setMessage($data['message']);
 		
 
@@ -31,22 +31,26 @@ class MessageManager{
 		$query = "INSERT INTO message (nom, message)
 		VALUES ('".$nom."', '".$message."')";
 		$res = mysqli_query($this->link, $query);
+
+		var_dump($res);
 		
 		
 			
-			if ($nom)
+			/*if ($nom)
 			{
 				$nom = $this->getByNom($nom);
 				return $avis;
 			}
 			else
+			{
 				throw new Exception("Erreur interne");
+			}*/
 		
 	        
 
 
 
-}
+     };
 
 
 

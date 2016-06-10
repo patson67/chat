@@ -4,7 +4,7 @@ private $nom;
 private $message;
 private $link;
 
-public function__construct($link){
+public function __construct($link){
 
 	$this->link = $link ;
 
